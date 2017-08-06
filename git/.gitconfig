@@ -10,10 +10,19 @@
 	co = checkout
 	st = status -sb
 	br = branch
+	# show verbose output (all branches, remotes repositories, tags)
 	branches = branch -a
 	remotes = remote -v
+	tags = tag -l
+	# undo last commit (keep/delete changes)
 	undo-last-commit = reset --soft HEAD~1
 	undo-permanently = reset --hard HEAD~1
+	rl = reflog
+	# contributors info
+	contributors = shortlog --summary --numbered
+	contrib = shortlog --summary --numbered
+	# list aliases
+	aliases = config --get-regexp alias
 
 [core]
 	excludesfile = ~/.gitignore_global
@@ -25,9 +34,9 @@
 	ui = auto
 
 [color "branch"]
-	current = bold green
-	local = yellow
-	remote = red
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
 
 [color "diff"]
 	meta = yellow bold
@@ -39,10 +48,10 @@
 	header = white bold dim
 	branch = magenta bold
 	nobranch = magenta reverse
-	added = yellow
-	changed = green
-	untracked = cyan
-	unmerged = red dim
+	added = green bold
+	changed = yellow bold
+	untracked = cyan bold
+	unmerged = red dim bold
 
 [diff]
 	renames = copies
