@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+	name = carloluis
+	email = carloluisr@gmail.com
+
+[alias]
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ci = commit
+	co = checkout
+	st = status
+	br = branch
+
+[core]
+	autocrlf = input
