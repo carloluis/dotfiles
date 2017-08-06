@@ -11,5 +11,6 @@
 	br = branch
 
 [core]
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	safecrlf = true
