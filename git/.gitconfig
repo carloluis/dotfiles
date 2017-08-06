@@ -5,12 +5,44 @@
 [alias]
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	history = log --pretty=format:'%C(bold)%h%Creset %C(magenta)%ad%Creset | %s%Cred%d%Creset %C(bold yellow)[%an]%Creset %C(cyan)(%cr)%Creset' --graph --date=short
+	graph = log --oneline --abbrev-commit --all --graph --decorate --color
 	ci = commit
 	co = checkout
-	st = status
+	st = status -sb
 	br = branch
+	branches = branch -a
+	remotes = remote -v
+	undo-last-commit = reset --soft HEAD~1
+	undo-permanently = reset --hard HEAD~1
 
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	safecrlf = true
+	editor = vim
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = bold green
+	local = yellow
+	remote = red
+
+[color "diff"]
+	meta = yellow bold
+	frag = cyan bold
+	new = green
+	old = red
+
+[color "status"]
+	header = white bold dim
+	branch = magenta bold
+	nobranch = magenta reverse
+	added = yellow
+	changed = green
+	untracked = cyan
+	unmerged = red dim
+
+[diff]
+	renames = copies
