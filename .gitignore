@@ -1,0 +1,6 @@
+# system files
+.DS_Store
+
+# thumbnail cache files
+._*
+Thumbs.db
