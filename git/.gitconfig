@@ -3,7 +3,8 @@
 	email = carloluisr@gmail.com
 
 [alias]
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	history = log --pretty=format:'%C(bold)%h%Creset %C(magenta)%ad%Creset | %s%Cred%d%Creset %C(bold yellow)[%an]%Creset %C(cyan)(%cr)%Creset' --graph --date=short
 	ci = commit
 	co = checkout
 	st = status
