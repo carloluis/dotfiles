@@ -3,8 +3,12 @@
 set -o errexit
 set -o nounset
 
-# CONFIG: PATH
+# CONFIG: PATH, HISTORY
 
 export PATH="/usr/local/bin:$PATH";
+
+HISTSIZE=1000
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups:erasedups
 
 [[ -r '.aliases.sh' && -f '.aliases.sh' ]] && source '.aliases.sh'
