@@ -1,0 +1,57 @@
+[user]
+	name = carloluis
+	email = carloluisr@gmail.com
+
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	history = log --pretty=format:'%C(bold)%h%Creset %C(magenta)%ad%Creset | %s%Cred%d%Creset %C(bold yellow)[%an]%Creset %C(cyan)(%cr)%Creset' --graph --date=short
+	graph = log --oneline --abbrev-commit --all --graph --decorate --color
+	ci = commit
+	co = checkout
+	st = status -sb
+	br = branch
+	# show verbose output (all branches, remotes repositories, tags)
+	branches = branch -a
+	remotes = remote -v
+	tags = tag -l
+	# undo last commit (keep/delete changes)
+	undo-last-commit = reset --soft HEAD~1
+	undo-permanently = reset --hard HEAD~1
+	rl = reflog
+	# contributors info
+	contributors = shortlog --summary --numbered
+	contrib = shortlog --summary --numbered
+	# list aliases
+	aliases = config --get-regexp alias
+
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	safecrlf = true
+	editor = vim
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = cyan bold
+	new = green
+	old = red
+
+[color "status"]
+	header = white bold dim
+	branch = magenta bold
+	nobranch = magenta reverse
+	added = green bold
+	changed = yellow bold
+	untracked = cyan bold
+	unmerged = red dim bold
+
+[diff]
+	renames = copies
