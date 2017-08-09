@@ -10,6 +10,8 @@
 	co = checkout
 	st = status -sb
 	br = branch
+	branches-to-prune = remote prune origin --dry-run
+	clean-remote = remote prune origin
 	# show verbose output (all branches, remotes repositories, tags)
 	branches = branch -a
 	remotes = remote -v
