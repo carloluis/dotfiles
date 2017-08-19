@@ -23,6 +23,8 @@
 	# contributors info
 	contributors = shortlog --summary --numbered
 	contrib = shortlog --summary --numbered
+	# git ignore generator
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	# list aliases
 	aliases = config --get-regexp alias
 
