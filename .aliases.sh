@@ -41,5 +41,8 @@ alias fix_ssty='stty sane'
 # make tab-completion case-insensitive
 alias cic='set completion-ignore-case On'
 
+# grep with colors
+alias grep='grep --colour'
+
 # Git
 alias go='git checkout'
