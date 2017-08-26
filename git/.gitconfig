@@ -3,28 +3,65 @@
 	email = carloluisr@gmail.com
 
 [alias]
+	# log
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	history = log --pretty=format:'%C(bold)%h%Creset %C(magenta)%ad%Creset | %s%Cred%d%Creset %C(bold yellow)[%an]%Creset %C(cyan)(%cr)%Creset' --graph --date=short
 	graph = log --oneline --abbrev-commit --all --graph --decorate --color
-	ci = commit
-	co = checkout
+	changes = log --pretty=format:'%h %cr %cn %Cgreen%s%Creset' --name-status
+
+	# commit
+	c = commit -m			# commit with message
+	ca = commit -am			# commit all with message
+	ci = commit				# commit
+	amend = commit --amend 	# amend your last commit
+
+	# checkout
+	co = checkout			# checkout
+	nb = checkout -b		# create and switch  to a new branch
+
+	# status
 	st = status -sb
-	br = branch
+	stat = status
+	s = status
+
+	# branch
+	b = branch -v			# branch (verbose)
+	br = branch				# branch
+
+	# diff
+	d = diff				# diff unstaged changes
+	dc = diff --cached		# diff staged changes
+	last = diff HEAD^		# diff last committed change
+
 	branches-to-prune = remote prune origin --dry-run
 	clean-remote = remote prune origin
+
 	# show verbose output (all branches, remotes repositories, tags)
 	branches = branch -a
 	remotes = remote -v
 	tags = tag -l
+
+	# reset
+	uncommit = reset --soft HEAD^	# go back before last commit, with files in uncommitted state
 	# undo last commit (keep/delete changes)
 	undo-last-commit = reset --soft HEAD~1
 	undo-permanently = reset --hard HEAD~1
+	filelog = log -u				# show changes to a file
 	rl = reflog
+
+	# stash
+	ss = stash				# stash changes
+	sl = stash list			# list stashes
+	sa = stash pop			# apply stash
+	sd = stash drop			# drop stashes
+
 	# contributors info
 	contributors = shortlog --summary --numbered
 	contrib = shortlog --summary --numbered
+
 	# git ignore generator
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
 	# list aliases
 	aliases = config --get-regexp alias
 
