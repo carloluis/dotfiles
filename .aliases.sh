@@ -6,6 +6,9 @@ alias cp='cp -iv'
 # interactive, verbose (prompt before overwrite, print the name of each file before moving it)
 alias mv='mv -iv'
 
+# create any necessary parent directories (verbose: list dir. creations)
+alias mkdir='mkdir -pv'
+
 # human-readable (print sizes in... e.g., 1K 234M 2G)
 alias ls='ls -Fh'
 
@@ -44,5 +47,16 @@ alias cic='set completion-ignore-case On'
 # grep with colors
 alias grep='grep --colour'
 
+# disk free space
+alias df='df -aH'
+
+# process status
+alias ps='ps -ahx'
+alias psl='ps -lr'
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+
 # Git
 alias go='git checkout'
+
+# public ip address
+alias myip="curl http://ipecho.net/plain; echo"
