@@ -81,38 +81,20 @@ More info on pretty-formats [here](https://git-scm.com/docs/pretty-formats)
 
 # Signing commits
 
-Read git helps on [signing commits with GPG](https://help.github.com/articles/signing-commits-with-gpg/) for more info.
+Read Git helps on [signing commits with GPG](https://help.github.com/articles/signing-commits-with-gpg/).
 
-Generate a new GPG key:
+Follow the steps to generate and add your key to [GitHub](https://github.com/settings/keys).
+
+Then, configure git to for signing a commit:
 
 ```bash
-gpg2 --gen-key
+$ git config --global user.signingkey GPG_KEY_ID # GPG_KEY_ID is the fingerprint of the key to use
 
-# check your GPG key pair:
-gpg2 --list-secret-keys --keyid-format LONG
-# copy the gpg key id from `sec` line:
-# sec   rsa2048/GPG_KEY_ID
-
-# print the GPG key ID, in ASCII armor format with:
-gpg2 --armor --export GPG_KEY_ID
+$ git commit -S -m 'signing commit...' # in order to sign a commit
 ```
 
-Then, copy your GPG key (include `--BEGIN--` & `--END--` lines):
-
-> -----BEGIN PGP PUBLIC KEY BLOCK-----
-> 
-> -----END PGP PUBLIC KEY BLOCK-----
-
-Use the GPG key on [GitHub settings keys](https://github.com/settings/keys).
-
-Set git `gpg` program on `.gitconfig`:
+Set globally flag to force sign every commit:
 
 ```bash
-git config --global gpg.program gpg2
-
-# optionally, you can set gpg sign for every commit
-git config --global commit.gpgsign true
-
-# or use for some commits with -S flag
-git commit -S -m 'signed commit'
+$ git config --global commit.gpgsign true
 ```
