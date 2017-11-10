@@ -109,4 +109,10 @@ Set git `gpg` program on `.gitconfig`:
 
 ```bash
 git config --global gpg.program gpg2
+
+# optionally, you can set gpg sign for every commit
+git config --global commit.gpgsign true
+
+# or use for some commits with -S flag
+git commit -S -m 'signed commit'
 ```
