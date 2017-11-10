@@ -79,13 +79,15 @@ Placeholders into format string:
 
 More info on pretty-formats [here](https://git-scm.com/docs/pretty-formats)
 
-# Signing commits
+---
+
+## Signing commits
 
 Read Git helps on [signing commits with GPG](https://help.github.com/articles/signing-commits-with-gpg/).
 
 Follow the steps to generate and add your key to [GitHub](https://github.com/settings/keys).
 
-Then, configure git to for signing a commit:
+Then, configure git for signing a commit:
 
 ```bash
 $ git config --global user.signingkey GPG_KEY_ID # GPG_KEY_ID is the fingerprint of the key to use
