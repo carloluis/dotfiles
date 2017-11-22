@@ -92,7 +92,7 @@ Then, configure git for signing a commit:
 ```bash
 $ git config --global user.signingkey GPG_KEY_ID # GPG_KEY_ID is the fingerprint of the key to use
 
-$ git commit -S -m 'signing commit...' # in order to sign a commit
+$ git commit -S -m 'signed commit...' # in order to sign a commit
 ```
 
 Set globally flag to force sign every commit:
