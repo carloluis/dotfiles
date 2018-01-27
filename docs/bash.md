@@ -36,3 +36,12 @@ unalias ls
 ### More
 
 More info on aliases [here](http://tldp.org/LDP/abs/html/aliases.html)
+
+## Shortcuts
+
+```bash
+!! # repeat last command
+!$ # repeat the last argument of the last command
+!:1-$ # repeat all arguments of the last command
+!* # repeat all arguments of the last command
+```
