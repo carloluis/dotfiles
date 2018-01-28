@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 function prompt_git() {
 	local branchName='';
 	local s='';
@@ -55,7 +54,7 @@ function prompt_git() {
 
 if [[ $(tput longname 2>/dev/null) ]]; then
 	# Solarized colors, taken from http://git.io/solarized-colors.
-	tput sgr0; # reset colors
+	tput sgr0; # reset
 	orange=$(tput setaf 166);
 	yellow=$(tput setaf 228);
 	red=$(tput setaf 124);
@@ -63,20 +62,23 @@ if [[ $(tput longname 2>/dev/null) ]]; then
 	violet=$(tput setaf 61);
 	blue=$(tput setaf 33);
 	white=$(tput setaf 15);
+	gray=$(tput setaf 242);
 	bold=$(tput bold);
 	reset=$(tput sgr0);
 fi
 
-PS1="\[${bold}\]\n";
-PS1+="\[${orange}\]\u";		# username
+PS1="\n";
+PS1+="\[${gray}\]\[\e(0\]lq\[\e(B\] ";
+PS1+="\[${bold}\]\[${orange}\]\u";
 PS1+="\[${white}\] at ";
-PS1+="\[${yellow}\]\h";		# hostname ()
+PS1+="\[${yellow}\]\h";
 PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W";		# working dir
-PS1+="\$(prompt_git \"\[${white}\] on ⑂ \[${violet}\]\" \"\[${blue}\]\")"
+PS1+="\[${green}\]\W";
+PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"
 PS1+="\n";
-PS1+="\[${white}\]\$ ";		# `$`
-PS1+="\[${reset}\]"			# reset color
+PS1+="\[${gray}\]\[\e(0\]mq\[\e(B\] ";
+PS1+="\[${white}\]\$ ";
+PS1+="\[${reset}\]"
 export PS1;
 
 PS2="\[${white}\]→ \[${reset}\]";
