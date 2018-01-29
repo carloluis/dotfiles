@@ -69,9 +69,15 @@ if [[ $(tput longname 2>/dev/null) ]]; then
 	reset=$(tput sgr0);
 fi
 
+if [[ "${USER}" == "root" ]]; then
+	usercolor="${red}";
+else
+	usercolor="${orange}";
+fi
+
 PS1="\n";
 PS1+="\[${gray}\]\[\e(0\]lq\[\e(B\] ";
-PS1+="\[${bold}\]\[${orange}\]\u";
+PS1+="\[${bold}\]\[\${usercolor}\]\u";
 PS1+="\[${white}\] at ";
 PS1+="\[${yellow}\]\h";
 PS1+="\[${white}\] in ";
