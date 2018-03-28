@@ -15,7 +15,7 @@ $ git config --global user.name "your name"
 $ git config --global user.email your_email
 ```
 
-## Using Git configuration file
+## Configuration file
 
 Inside `.gitconfig` file we can define *aliases*, *core* variables, custom *colors* for commands output, etc.
 
@@ -24,21 +24,20 @@ Inside `.gitconfig` file we can define *aliases*, *core* variables, custom *colo
 
 Check the manual page with: `man git-config`
 
-### Example 
+### Example
 
-Our previous basic config is written to global `.gitconfig` as follows:
+Our previous basic config is written to global `.gitconfig` as:
 
 ```
-[user] 
+[user]
     name = your name
     email = your_email
 ```
 
----
+<details>
+<summary>Git Config</summary>
 
-## Git config
-
-Online docs [here](https://git-scm.com/docs/git-config)
+Online docs on [git-scm.com](https://git-scm.com/docs/git-config)
 
 ### Colors
 
@@ -62,7 +61,12 @@ Shortcuts for git commands. E.g:
 * `git co` -> `git checkout`
 * [...](.gitconfig)
 
-#### Git log using format string
+</details>
+
+<details>
+<summary>Git Log</summary>
+
+Using custom format:
 
 ```bash
 $ git log --pretty=format:'%h %ad | %s%d [%an]' --graph
@@ -77,9 +81,11 @@ Placeholders into format string:
 * `%an`: author name
 * `%ae`: author email
 
-More info on pretty-formats [here](https://git-scm.com/docs/pretty-formats)
+More info on [pretty-formats](https://git-scm.com/docs/pretty-formats)
 
----
+</details>
+
+----
 
 ## Signing commits
 
