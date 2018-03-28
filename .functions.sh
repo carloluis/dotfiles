@@ -23,3 +23,12 @@ function trash() {
 function gi() {
 	curl -L -s "https://www.gitignore.io/api/$@";
 }
+
+function git_prune() {
+	local pattern=${1:-""}
+	if [[ -z "$pattern" ]]; then
+		echo 'branch pattern expected!'
+	else
+		git branch -d $(git branch | grep -E "$pattern")
+	fi
+}
