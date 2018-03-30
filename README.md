@@ -32,4 +32,4 @@ Pending...
 
 ## License
 
-This code is available under the [MIT License](LICENSE)
+[MIT](LICENSE) © [Carloluis](https://github.com/carloluis)
