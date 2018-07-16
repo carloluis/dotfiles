@@ -17,7 +17,7 @@ $ git config --global user.email your_email
 
 ## Configuration file
 
-Inside `.gitconfig` file we can define *aliases*, *core* variables, custom *colors* for commands output, etc.
+Inside the `.gitconfig` file we can define *aliases*, *core variables*, custom *colors* for commands output, etc.
 
 * `.git/config`: local configurations (inside a git repository)
 * `~/.gitconfig`: global configurations
@@ -105,4 +105,12 @@ Set globally flag to force sign every commit:
 
 ```bash
 $ git config --global commit.gpgsign true
+```
+
+## Clean up
+
+Delete local branches matching a pattern:
+
+```bash
+git branch -D $(git branch | grep -E 'pattern')
 ```
