@@ -3,9 +3,14 @@
 DOTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 files=".bashrc .bash_profile .aliases.sh .functions.sh"
 
-echo "Copying files from: $DOTS_DIR"
-
 for file in $files; do
-	echo "copying $file into ~"
+	if [[ -f ~/"$file" ]]; then
+		echo "replace $file into ~"
+		rm ~/"$file"
+	else
+		echo "copying $file into ~"
+	fi
 	cp "$file" ~
 done
+
+source ~/.bashrc
