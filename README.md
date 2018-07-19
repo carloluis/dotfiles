@@ -6,7 +6,7 @@
 ▀▀▀░ ▀▀▀▀ ░░▀░░ ▀░░ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀
 ```
 
-This repo contains my configuration files...
+> This repo contains my configuration files...
 
 More info about dotfiles [here](https://dotfiles.github.io/)
 
@@ -16,13 +16,13 @@ More info about dotfiles [here](https://dotfiles.github.io/)
 dotfiles
 ├── docs
 │   ├── bash.md
+│   ├── git.md
 │   └── README.md
-├── git
-│   ├── .gitconfig
-│   ├── .gitignore_global
-│   └── README.md
-├── .bash_profile 
+├── .aliases.sh
+├── .bash_profile
 ├── .bashrc
+├── .gitignore_global
+├── .gitconfig
 ├── ...
 └── README.md
 ```
