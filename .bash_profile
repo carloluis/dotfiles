@@ -7,8 +7,8 @@ set -o nounset
 
 export PATH="/usr/local/bin:$PATH";
 
-HISTSIZE=1000
-HISTFILESIZE=10000
+HISTSIZE=2000
+HISTFILESIZE=22000
 HISTCONTROL=ignoredups:erasedups
 
 [[ -r '.aliases.sh' && -f '.aliases.sh' ]] && source '.aliases.sh'
