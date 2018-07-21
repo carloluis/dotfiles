@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-files=".bashrc .bash_profile .aliases.sh .functions.sh"
+files=".bashrc .bash_profile .aliases.sh .functions.sh .prompt.sh"
 
 for file in $files; do
 	if [[ -f ~/"$file" ]]; then
