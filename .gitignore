@@ -4,3 +4,7 @@
 # thumbnail cache files
 ._*
 Thumbs.db
+
+# backup folder
+backup/*
+!backup/.gitkeep
