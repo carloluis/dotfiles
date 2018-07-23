@@ -29,16 +29,11 @@ dotfiles
 
 ## Instalation
 
-<details>
-<summary>WIP</summary>
-
 ```bash
 git clone https://github.com/carloluis/dotfiles.git ~/.dotfiles
 
 bash ~/.dotfiles/install.sh
 ```
-
-</details>
 
 ## License
 
