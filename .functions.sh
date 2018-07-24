@@ -42,3 +42,8 @@ function git_prune() {
 		git branch -d $(git branch | grep -E "$pattern")
 	fi
 }
+
+# list process owned by my user
+my_ps() {
+	ps $@ -u $USER -o uid,pid,%cpu,%mem,start,time,command;
+}
