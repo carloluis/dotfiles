@@ -44,6 +44,13 @@ function git_prune() {
 }
 
 # list process owned by my user
-my_ps() {
+function my_ps() {
 	ps $@ -u $USER -o uid,pid,%cpu,%mem,start,time,command;
+}
+
+function iii() {
+	echo "$(uname -av)"
+	echo "CPU:		$(sysctl -n machdep.cpu.brand_string)"
+	echo "OS:		$(sysctl -n machdep.cpu.brand_string)"
+	echo "Kernel:	$(sysctl -n kern.version)"
 }
