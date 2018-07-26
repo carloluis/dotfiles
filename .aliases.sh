@@ -26,6 +26,10 @@ alias .....='cd ../../../../'
 alias -- -="cd -"
 alias ~="cd ~"
 
+# networking
+alias netcon='lsof -i' # show all open TCP/IP sockets
+alias ipInfo='ipconfig getpacket en0' # get info on connections for en0
+
 # open current directory in MacOS Finder
 alias finder='open -a Finder ./'
 
