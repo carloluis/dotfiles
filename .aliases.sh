@@ -64,3 +64,6 @@ alias go='git checkout'
 
 # public ip address
 alias myip="curl http://ipecho.net/plain; echo"
+
+# search
+alias qfind="find . -name " # quick search for file
