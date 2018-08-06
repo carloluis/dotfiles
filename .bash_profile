@@ -7,6 +7,7 @@ set -o nounset
 
 export PATH="/usr/local/bin:$PATH";
 
+HISTTIMEFORMAT="%Y%m%d %T  "
 HISTSIZE=2000
 HISTFILESIZE=22000
 HISTCONTROL=ignoredups:erasedups
