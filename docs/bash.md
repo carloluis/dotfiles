@@ -37,6 +37,22 @@ unalias ls
 
 More info on [aliases](http://tldp.org/LDP/abs/html/aliases.html)
 
+## Bash completion
+
+Install `bash-completion` using [brew](https://brew.sh/ "Homebrew"):
+
+```bash
+brew install bash-completion
+```
+
+To enable auto-completion, add the following lines to `~/.bash_profile`:
+
+```bash
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+```
+
 ## Shortcuts
 
 Bash [histoy expansions](https://sanctum.geek.nz/arabesque/bash-history-expansion/):
