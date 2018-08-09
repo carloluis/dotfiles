@@ -67,3 +67,6 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 # search
 alias qfind="find . -name " # quick search for file
+
+# files
+alias numFiles='echo $(ls -1 | wc -l)' # number of non-hidden files
