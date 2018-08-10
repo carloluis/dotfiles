@@ -69,4 +69,6 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias qfind="find . -name " # quick search for file
 
 # files
-alias numFiles='echo $(ls -1 | wc -l)' # number of non-hidden files
+alias numFiles='echo $(ls -1 | wc -l)' # number of non-hidden files
+alias make1mb='mkfile 1m ./1MB.dat'    # creates a file of 1mb size (all zeros)
+alias make5mb='mkfile 5m ./5MB.dat'    # creates a file of 5mb size (all zeros)
