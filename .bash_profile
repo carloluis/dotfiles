@@ -12,8 +12,8 @@ HISTSIZE=2000
 HISTFILESIZE=22000
 HISTCONTROL=ignoredups:erasedups
 
-[[ -r '.aliases.sh' && -f '.aliases.sh' ]] && source '.aliases.sh'
+[[ -r ~/.aliases.sh && -f ~/.aliases.sh ]] && source ~/.aliases.sh
 
-[[ -r '.functions.sh' && -f '.functions.sh' ]] && source '.functions.sh'
+[[ -r ~/.functions.sh && -f ~/.functions.sh ]] && source ~/.functions.sh
 
-[[ -r '.prompt.sh' && -f '.prompt.sh' ]] && source '.prompt.sh'
+[[ -r ~/.prompt.sh && -f ~/.prompt.sh ]] && source ~/.prompt.sh
