@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-files=".bashrc .bash_profile .aliases.sh .functions.sh .prompt.sh"
+files=".bashrc .bash_profile .aliases.sh .functions.sh .prompt.sh .zshrc"
 BACKUP_DIR="$DOTS_DIR/backup"
 
 printf "\nCopying new dotfiles from $DOTS_DIR...\n"
